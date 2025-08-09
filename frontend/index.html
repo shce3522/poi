@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>ciallo~</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game" width="480" height="320"></canvas>
+    <div id="hud">
+      <img id="switch-skin" src="assets/switch.svg" title="切换皮肤"/>
+      <span id="score">0</span>
+    </div>
+    <div id="controls">
+      <p><strong>手机</strong>：点击屏幕跳跃</p>
+      <p><strong>电脑</strong>：空格 / ↑ 键跳跃</p>
+    </div>
+    <div id="gameover" class="hidden">
+      <h2>游戏结束</h2>
+      <p>得分：<span id="final-score"></span></p>
+      <label>姓名：<input type="text" id="player-name" placeholder="输入姓名"></label>
+      <button id="submit-score">提交成绩</button>
+      <button id="restart">再来一次</button>
+    </div>
+    <div id="share" class="hidden">
+      <p>分享链接</p>
+      <input type="text" id="share-link" readonly>
+      <button id="copy-link">复制</button>
+      <button id="close-share">关闭</button>
+    </div>
+    <div id="leaderboard">
+      <h3>排行榜 (前50)</h3>
+      <ol id="rank-list"></ol>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
